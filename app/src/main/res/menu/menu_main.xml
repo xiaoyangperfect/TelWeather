@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    tools:context=".activity.TelWeatherActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/setting"
+        android:icon="@mipmap/ic_settings_white_24dp"/>
+    <item
+        android:id="@+id/action_01"
+        android:title="@string/about_us"
+        android:icon="@mipmap/ic_person_white_24dp"/>
+</menu>
