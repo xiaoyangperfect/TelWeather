@@ -1,5 +1,4 @@
-package com.italkbb.telweather.activity.fragment;
-
+package com.search.healther.activity.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,16 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.italkbb.telweather.R;
+import com.search.healther.R;
 
 /**
- * Created by user on 2015/9/17.
+ * Created by user on 2015/11/16.
  */
-public class TestFragment extends Fragment {
+public class NewsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_test, null);
+        View view = inflater.inflate(R.layout.fragment_news, null);
         return view;
     }
 }

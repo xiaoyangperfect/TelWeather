@@ -1,6 +1,5 @@
-package com.italkbb.telweather.activity;
+package com.search.healther.activity;
 
-import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 
 /**

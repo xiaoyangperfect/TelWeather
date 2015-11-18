@@ -1,8 +1,5 @@
-package com.italkbb.telweather.activity;
+package com.search.healther.activity;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -20,8 +17,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.italkbb.telweather.R;
-import com.italkbb.telweather.activity.fragment.TestFragment;
+import com.search.healther.R;
+import com.search.healther.activity.fragment.NewsFragment;
+import com.search.healther.activity.fragment.SearchFragment;
+import com.search.healther.activity.fragment.TestFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +28,7 @@ import java.util.List;
 /**
  * Created by user on 2015/9/17.
  */
-public class TelWeatherActivity extends BaseActivity {
+public class HealtherActivity extends BaseActivity {
 
     private DrawerLayout mDrawerLayout;
     private ViewPager viewPager;
@@ -65,7 +64,7 @@ public class TelWeatherActivity extends BaseActivity {
                         .setAction("Clear", new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                Toast.makeText(TelWeatherActivity.this, "snackbar", Toast.LENGTH_LONG).show();
+                                Toast.makeText(HealtherActivity.this, "snackbar", Toast.LENGTH_LONG).show();
                             }
                         }).show();
             }
@@ -90,20 +89,20 @@ public class TelWeatherActivity extends BaseActivity {
         Adapter adapter = new Adapter(getSupportFragmentManager());
 
         Bundle args = new Bundle();
-        TestFragment osFrag = new TestFragment();
+        NewsFragment osFrag = new NewsFragment();
         osFrag.setArguments(args);
 
         Bundle args1 = new Bundle();
-        TestFragment deviceFrag = new TestFragment();
+        SearchFragment deviceFrag = new SearchFragment();
         deviceFrag.setArguments(args1);
 
         Bundle args2 = new Bundle();
         TestFragment favFrag = new TestFragment();
         favFrag.setArguments(args2);
 
-        adapter.addFragment(osFrag, "OS Version");
-        adapter.addFragment(deviceFrag, "Device");
-        adapter.addFragment(favFrag, "Favorites");
+        adapter.addFragment(osFrag, getString(R.string.news));
+        adapter.addFragment(deviceFrag, getString(R.string.search));
+        adapter.addFragment(favFrag, getString(R.string.tests));
         viewPager.setAdapter(adapter);
     }
 

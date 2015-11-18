@@ -1,4 +1,4 @@
-package com.italkbb.telweather;
+package com.search.healther;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
